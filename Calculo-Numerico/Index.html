@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Encontrar raízes de uma polinomial</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+    css Copy code body {
+      margin-left: 500px;
+      margin-right: 500px;
+      margin-top: 5%;
+      background: rgb(93, 232, 111);
+      background: linear-gradient(90deg,
+          rgba(93, 232, 111, 1) 0%,
+          rgba(0, 254, 255, 1) 56%,
+          rgba(219, 219, 219, 1) 100%);
+      font-family: 'Raleway', sans-serif;
+      animation: fadein 3s;
+    }
+
+    h1 {
+      color: #123142;
+      font-size: 32px;
+      text-align: center;
+      text-decoration: underline;
+      animation: fadein 3s;
+    }
+
+    h2 {
+      color: #0a3f90;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+      animation: fadein 3s;
+    }
+
+    h3 {
+      color: #000000;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+      animation: fadein 3s;
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    label {
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+      display: block;
+      margin-bottom: 3px;
+      font-weight: bold;
+      margin-left: 5px;
+      font-family: 'Raleway', sans-serif;
+      animation: fadein 3s;
+    }
+
+    input[type='number'],
+    input[type='text'] {
+      padding: 8px;
+      font-size: 16px;
+      border: 3px solid rgb(119, 119, 119);
+      border-radius: 50px;
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      animation: fadein 3s;
+    }
+
+    button {
+      padding: 10px;
+      margin-top: 30px;
+      font-size: 16px;
+      background-color: #209bd8;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 25%;
+    }
+
+    button:hover {
+      background-color: #264f8b;
+    }
+
+    button:active {
+      animation: scale 0.2s ease-in-out;
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0.8);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    #resultado {
+      padding-top: 20px;
+      padding-right: 50px;
+      padding-left: 50px;
+      font-size: 18px;
+      line-height: 2.0;
+      border-radius: 20px;
+      color: #05a6f1;
+      font-family: 'Fj
+
+
+      .caixa-resultado {
+        width: 90%;
+        text-align: center;
+      }
+
+      .resultado-centro {
+        padding-left: 100px;
+      }
+
+      /* Safari and Chrome */
+      @-webkit-keyframes fadein {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+  </style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<div class="info">
+  <p>Este programa encontra as raízes de uma polinomial de grau N</p>
+  <p>Leve em consideração a seguinte função:</p>
+  <p class="info-cor">f(x) = x<sup>3</sup> - 9x + 3</p>
+
+</div>
+
+<body>
+  <div class="caixa-branca">
+    <label for="grau">Grau:</label>
+    <p><input type="number" id="grau"><br></p>
+    <label for="epsilon">Epsilon:</label>
+    <p><input type="number" id="epsilon" placeholder="ex: 0,0001"><br></p>
+    <label for="coeficientes">Coeficientes:</label>
+    <p><input type="text" id="coeficientes""><br></p>
+      </div>
+      <p><button onclick=" calcular()">Calcular</button></p>
+    <script src="Calculadora.js">
+      function toggleInfo() {
+        var info = document.querySelector('.info');
+        if (info.style.display === 'block') {
+          info.style.display = 'none';
+        } else {
+          info.style.display = 'block';
+        }
+      }
+    </script>
+  </div>
+  <div class="caixa-resultado">
+    <h3 class="resultado-centro">Resultado</h3>
+    <div id="resultado"></div>
+  </div>
+</body>
+
+</html>
